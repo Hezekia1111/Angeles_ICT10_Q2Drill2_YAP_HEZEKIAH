@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Campus Club Registry</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+
+    <style>
+        body {
+            background-color: #eaf4ff;
+            font-family: Arial, sans-serif;
+            color: #1f2937;
+        }
+
+        .container-box {
+            max-width: 700px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #c7ddf5;
+            box-shadow: 0 4px 12px rgba(0, 80, 150, 0.15);
+        }
+
+        .title {
+            text-align: center;
+            color: #1261a0;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #6b7280;
+            margin-bottom: 25px;
+        }
+
+        .form-label {
+            font-weight: bold;
+            color: #1261a0;
+        }
+
+        .form-control {
+            border: 1px solid #9bc4e2;
+        }
+
+        .form-control:focus {
+            border-color: #1261a0;
+            box-shadow: 0 0 5px rgba(18, 97, 160, 0.25);
+        }
+
+        #add-btn {
+            width: 100%;
+            background-color: #1261a0;
+            border: none;
+            color: white;
+            padding: 10px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        #add-btn:hover {
+            background-color: #0b4778;
+        }
+
+        .result-box {
+            margin-top: 25px;
+            background-color: #f3f8fd;
+            border: 1px solid #c7ddf5;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .result-title {
+            color: #1261a0;
+            font-weight: bold;
+        }
+
+        .member-badge {
+            display: inline-block;
+            background-color: #d9ecff;
+            color: #0b4778;
+            padding: 7px 12px;
+            margin: 4px;
+            border-radius: 15px;
+            font-size: 14px;
+        }
+
+        .count {
+            font-size: 30px;
+            font-weight: bold;
+            color: #1261a0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-box">
+
+        <h1 class="title">Campus Club Registry</h1>
+
+        <p class="subtitle">
+            Student Club Member Management
+        </p>
+
+        <div class="mb-3">
+            <label for="first-name" class="form-label">First Name</label>
+            <input
+                type="text"
+                id="first-name"
+                class="form-control"
+                placeholder="Enter first name"
+            >
+        </div>
+
+        <div class="mb-3">
+            <label for="last-name" class="form-label">Last Name</label>
+            <input
+                type="text"
+                id="last-name"
+                class="form-control"
+                placeholder="Enter last name"
+            >
+        </div>
+
+        <button id="add-btn" py-click="add_member_handler">
+            Add Member
+        </button>
+
+        <div class="result-box">
+            <p class="result-title mb-1">Total Members</p>
+
+            <div id="total-output" class="count">
+                8
+            </div>
+        </div>
+
+        <div class="result-box">
+            <p class="result-title">Member Directory</p>
+
+            <div id="member-list-output">
+                <span class="member-badge">Michael Jackson</span>
+                <span class="member-badge">Beyoncé Giselle Knowles</span>
+                <span class="member-badge">Pinkie Pie</span>
+                <span class="member-badge">佐伊 雅普</span>
+                <span class="member-badge">Maeo Maeo</span>
+                <span class="member-badge">Goyangi Meokda</span>
+                <span class="member-badge">AllanEdgar Poe</span>
+                <span class="member-badge">Simon Mactavish</span>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="py" src="./main.py"></script>
+
+</body>
+</html>
